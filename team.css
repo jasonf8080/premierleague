@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background: #333;
+    position: relative;
+    font-family: 'Anek Gujarati', sans-serif;
+}
+
+.title{
+    text-transform: uppercase;
+    margin-left: 8%;
+    color: white;
+}
+
+.team-header{
+    position: relative;
+    max-width: 100%;
+}
+
+.team-header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.club-logo{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 140px;
+    height: auto;
+    z-index: 99;
+}
+
+.header-bg {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 100vh;
+    margin-bottom: 50px;
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 99;
+}
+
+.header-content p{
+    font-size: 22px;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.header-content h1{
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.roster-grid{
+    display: grid;
+    max-width: 85%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
+    row-gap: 35px;
+    background: #333;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.roster-item{
+    position: relative;
+    max-width: 100%;
+    border-radius: 6px;
+    background-color: rgb(46, 45, 45);
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px 20px 0px 20px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.roster-item .number{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.roster-item img{
+    max-width: 100%;
+    display: block;
+    margin-top: 25px;
+}
+
+.roster-item:hover{
+    background-color: rgb(255, 122, 82);
+    
+}
+
+
+
+
+
+
+@media(max-width: 1200px){
+   
+
+    .roster-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+
+   
+}
+
+@media(max-width: 992px){
+    
+
+    .header-content p{
+        font-size: 18px;
+    }
+    
+    .header-content h1{
+        font-size: 60px;
+    }
+
+    .club-logo{
+        top: 28px;
+        left: 28px;
+        width: 90px;
+        height: auto;
+        
+    }
+    
+
+    .roster-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 768px){
+    
+
+    .header-content p{
+        font-size: 14px;
+    }
+    
+    .header-content h1{
+        font-size: 55px;
+    }
+
+    .roster-grid{
+        column-gap: 22px;
+        row-gap: 22px;
+    }
+}
+
+@media(max-width: 600px){
+   
+
+    .header-content p{
+        font-size: 12px;
+    }
+    
+    .header-content h1{
+        font-size: 48px;
+    }
+
+}

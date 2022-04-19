@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background: #333;
+    position: relative;
+    font-family: 'Anek Gujarati', sans-serif;
+}
+
+.table-section{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   
+}
+
+.table-header{
+    background: rgb(255, 122, 82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.season-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    visibility: hidden;
+}
+
+.table-header i{
+    margin-left: 10px;
+}
+
+.years{
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    top: 100%;
+    text-align: center;
+    left: 0;
+    background-color: rgb(255, 122, 82);
+    color: white;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.table{
+    min-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+
+thead{
+    font-weight: bold;
+}
+
+tr{
+    background-color: rgb(46, 45, 45);
+    min-width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    color: white;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    transition: background-color 0.5s ease;
+}
+
+tr:hover{
+    background-color: rgb(114, 114, 114);
+}
+
+td{
+    padding: 10px 0;
+}
+
+.club{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.club img{
+    margin-right: 10px;
+    width: 40px;
+    height: auto;
+}
+
+
+
+
+.loader-container.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 49, 49);
+    z-index: 999;
+}
+
+.loader-container{
+    display: none;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+
+@media(max-width: 1200px){
+  
+
+   
+}
+
+@media(max-width: 992px){
+
+    td{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 768px){
+   
+
+    td{
+        font-size: 12px;
+    }
+
+    .club img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media(max-width: 600px){
+
+
+    td{
+        font-size: 10px;
+    }
+}

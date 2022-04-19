@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader-container active">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+
+    <section class="table-section">
+        <div class="table-header">
+            <div class="season-select">
+                <p>2020-2021</p>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="years">
+                    <li class="year-selection" data-id="2021-2022">2021-2022</li>
+                    <li class="year-selection" data-id="2020-2021">2020-2021</li>
+                    <li class="year-selection" data-id="2019-2020">2019-2020</li>
+                </ul>
+            </div>
+        </div>
+            <table class="table">
+                <thead>
+                    <td>Position</td>
+                    <td>Club</td>
+                    <td>Played</td>
+                    <td>Won</td>
+                    <td>Drawn</td>
+                    <td>Lost</td>
+                    <td>GF</td>
+                    <td>GA</td>
+                    <td>GD</td>
+                    <td>Points</td>
+                </thead>
+
+                
+                <tbody></tbody>
+            </table>
+    
+    </section>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
