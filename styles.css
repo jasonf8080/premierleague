@@ -175,6 +175,9 @@ td{
 
 @media(max-width: 600px){
 
+    .table-section{
+        max-width: 100%;
+    }
 
     td{
         font-size: 10px;
