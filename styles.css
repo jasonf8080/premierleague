@@ -446,6 +446,12 @@ td{
 }
 
 @media(max-width: 600px){
+
+    .nav-logo{
+        max-width: 40px;
+        height: auto;
+    } 
+
     .title{
         font-size: 35px;
     }
