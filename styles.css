@@ -511,6 +511,10 @@ td{
         padding-left: 0px;
     }
 
+    .table-section{
+        max-width: 100%;
+    }
+
     .header-section{
         height: 80vh;
     }
