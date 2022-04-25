@@ -28,8 +28,8 @@ export const displayItems = (data) => {
         <td>${wins}</td>
         <td>${draws}</td>
         <td>${losses}</td>
-        <td>${GF}</td>
-        <td>${GA}</td>
+        <td class="gf">${GF}</td>
+        <td class="ga">${GA}</td>
         <td>${GD}</td>
         <td>${points}</td>
     </tr>`
