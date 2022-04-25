@@ -4,8 +4,12 @@ import { displayItems, displayFixtures } from "./displayItems.js";
 import { hideLoader } from "./loader.js";
 
 
+
 let baseURL = `https://www.thesportsdb.com/api/v1/json/2/lookuptable.php?l=4328&s=2021-2022`;
 let fixtureURL = 'https://www.thesportsdb.com/api/v1/json/50130162/eventspastleague.php?id=4328';
+const menuBtn = document.querySelector('.menu-icon');
+const menu = document.querySelector('.links');
+const links = document.querySelectorAll('.links li');
 const clubLink = document.querySelector('#club-link');
 const tableBody = document.querySelector('tbody');
 const latestResultsGrid = document.querySelector('.latest-results-grid');
@@ -20,6 +24,15 @@ const load = async () => {
     displayData(baseURL);
     adjustFixtures(fixtureURL);
 }
+
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    teamsList.classList.remove('active');
+})
+
+links.forEach((link) => {
+    link.addEventListener('click', () => menu.classList.remove('active'))
+})
 
 clubLink.addEventListener('click', async() => {
     const data = await fetchMenu(baseURL);
