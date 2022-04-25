@@ -455,6 +455,13 @@ td{
         height: auto;
     } 
 
+    .header-section{
+        background: var(--dark-color);
+        height: 80vh;
+        position: relative;
+        margin-top: 0px !important;
+    }
+
     .title{
         font-size: 35px;
     }
