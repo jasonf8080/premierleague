@@ -210,7 +210,8 @@ body{
     }
     
     .roster-item .number{
-        font-size: 24px;
+       visibility: hidden;
+
     }
 
 }
