@@ -109,6 +109,26 @@ const adjustFixtures = async (url) => {
     displayFixtures(fixtures, latestResultsGrid);
 }
 
+const matchResult = window.matchMedia("(max-width: 768px)");
+
+function isSmallScreen(){
+    if(window.matchMedia("(max-width: 768px)").matches){
+        resetLetter();
+    }
+}
+
+function resetLetter(){
+    const winRecord = [...document.querySelectorAll('.wld')];
+        winRecord.forEach((item) => {
+        let itemContent = item.textContent;
+        const letter = itemContent.charAt(0);
+
+        item.textContent = letter;
+    })
+}
+
+isSmallScreen();
+
 
 window.addEventListener('DOMContentLoaded', load);
 
