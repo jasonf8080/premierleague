@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati&display=swap');
 
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+:root{
+    --light-color: rgb(98, 25, 180);
+    --dark-color: rgb(39, 15, 54);
+}
+
 body{
-    background: #333;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,9,121,1) 41%, rgba(0,212,255,1) 100%);
     position: relative;
     font-family: 'Anek Gujarati', sans-serif;
 }
@@ -17,8 +23,10 @@ body{
     max-width: 85%;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     color: white;
     font-size: 30px;
+    
 }
 
 .player-header{
@@ -59,7 +67,7 @@ body{
 .stats-table{
     min-width: 100%;
     text-align: center;
-    background: #222;
+    background: var(--dark-color);
     font-size: 20px;
     border-radius: 8px;
 }
@@ -75,13 +83,7 @@ body{
 }
 
 
-.description{
-    color: rgb(221, 221, 221);
-    max-width: 85%;
-    margin: 0 auto;
-    margin-top: 50px;
-    line-height: 2;
-}
+
 
 @media(max-width: 1200px){
    

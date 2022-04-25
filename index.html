@@ -13,23 +13,50 @@
         <div class="lds-dual-ring"></div>
     </div>
 
+    <div class="nav-container">
+        <nav class="nav">
+            <img src="logo.png" alt="" class="nav-logo">
+
+            <ul class="links">
+                <li id="club-link">Clubs</li>
+                <li><a href="player-page.html">Players</a></li>
+                <li>Standings</li>
+                <li>Results</li>
+            </ul>
+        </nav>
+
+        <div class="teams-list">
+            <ul></ul>
+        </div>
+    </div>
+
+    <section class="header-section">
+        <div class="pl-logo">
+            <img src="logo.png" alt="">
+        </div>
+
+        <div class="header-img">
+           
+        </div>
+        <div class="pl-header">
+            
+        </div>
+    </section>
+
+    <section class="latest-results">
+        <h1 class="title">Latest Results</h1>
+
+        <div class="latest-results-grid"></div>
+    </section>
+
 
     <section class="table-section">
-        <div class="table-header">
-            <div class="season-select">
-                <p>2020-2021</p>
-                <i class="fa-solid fa-chevron-down"></i>
-                <ul class="years">
-                    <li class="year-selection" data-id="2021-2022">2021-2022</li>
-                    <li class="year-selection" data-id="2020-2021">2020-2021</li>
-                    <li class="year-selection" data-id="2019-2020">2019-2020</li>
-                </ul>
-            </div>
-        </div>
+        <h1 class="title">Current Standings</h1>
+    
             <table class="table">
                 <thead>
                     <td>Position</td>
-                    <td>Club</td>
+                    <td class="align-left">Club</td>
                     <td>Played</td>
                     <td>Won</td>
                     <td>Drawn</td>
@@ -45,6 +72,13 @@
             </table>
     
     </section>
+
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy;Premier League</p>
+            <img src="https://seeklogo.com/images/P/premier-league-logo-7B3F0F173A-seeklogo.com.png" alt="">
+        </div>
+    </div>
 
     <script type="module" src="app.js"></script>
 </body>

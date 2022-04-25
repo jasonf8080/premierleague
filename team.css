@@ -13,87 +13,107 @@ img{
     display: block;
 }
 
+:root{
+    --light-color: rgb(98, 25, 180);
+    --dark-color: rgb(39, 15, 54);
+}
+
+section{
+    margin: 0 auto;
+    max-width: 90%;
+}
+
 li{
     list-style: none;
 }
 
 body{
-    background: #333;
+    background: linear-gradient(to bottom right, #9933ff 0%, #66ff99 100%);
     position: relative;
     font-family: 'Anek Gujarati', sans-serif;
 }
 
 .title{
-    text-transform: uppercase;
-    margin-left: 8%;
+    font-size: 45px;
     color: white;
 }
 
-.team-header{
-    position: relative;
-    max-width: 100%;
-}
 
-.team-header::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
 
-.club-logo{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 140px;
-    height: auto;
-    z-index: 99;
-}
-
-.header-bg {
-    max-width: 100%;
-    min-width: 100%;
-    height: auto;
-    max-height: 100vh;
+.team-name-section{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.header-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.team-name-section img{
+    height: 125px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.team-name-section h1{
+    font-size: 85px;
     color: white;
-    z-index: 99;
 }
 
-.header-content p{
-    font-size: 22px;
-    text-shadow: 2px 2px rgb(0, 0, 0);
+
+
+.latest-results{
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.header-content h1{
-    font-size: 90px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px rgb(0, 0, 0);
+.recent-results-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
 }
 
+.latest-result, .latest-result img{
+    max-width: 100%;
+}
+
+
+.latest-result img{
+    border-bottom: 1px solid rgb(100, 100, 100);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.latest-result{
+    background-color: var(--dark-color);
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.473);
+}
+
+.latest-result:hover{
+    transform: scale(1.05);
+    background-color: rgb(255, 122, 82);
+}
+
+.team-1, .team-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    font-size: 20px;
+}
 .roster-grid{
     display: grid;
-    max-width: 85%;
+    max-width: 100%;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 35px;
-    row-gap: 35px;
-    background: #333;
+    column-gap: 30px;
+    row-gap: 30px;
     margin-top: 20px;
     margin-bottom: 50px;
 }
@@ -102,7 +122,7 @@ body{
     position: relative;
     max-width: 100%;
     border-radius: 6px;
-    background-color: rgb(46, 45, 45);
+    background-color: var(--dark-color);
     color: white;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     padding: 20px 20px 0px 20px;
@@ -132,7 +152,6 @@ body{
 
 
 
-
 @media(max-width: 1200px){
    
 
@@ -147,21 +166,7 @@ body{
 @media(max-width: 992px){
     
 
-    .header-content p{
-        font-size: 18px;
-    }
-    
-    .header-content h1{
-        font-size: 60px;
-    }
-
-    .club-logo{
-        top: 28px;
-        left: 28px;
-        width: 90px;
-        height: auto;
-        
-    }
+  
     
 
     .roster-grid{
@@ -171,15 +176,21 @@ body{
 }
 
 @media(max-width: 768px){
-    
 
-    .header-content p{
-        font-size: 14px;
+
+    .team-name-section img{
+        height: 100px;
+        width: auto;
+        margin-right: 20px;
     }
     
-    .header-content h1{
-        font-size: 55px;
+    .team-name-section h1{
+        font-size: 65px;
+        color: white;
+
     }
+    
+    
 
     .roster-grid{
         column-gap: 22px;
@@ -190,12 +201,8 @@ body{
 @media(max-width: 600px){
    
 
-    .header-content p{
-        font-size: 12px;
-    }
-    
-    .header-content h1{
-        font-size: 48px;
+    .title{
+        font-size: 35px;
     }
 
 }
