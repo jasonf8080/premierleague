@@ -526,6 +526,7 @@ td{
 
     td{
         font-size: 14px;
+        min-width: 60px;
     }
 
     .pl-logo{
