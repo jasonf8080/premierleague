@@ -434,6 +434,11 @@ td{
         row-gap: 15px;
     }
 
+    .teams-list ul{
+        row-gap: 0px !important;
+        column-gap: 0px !important;
+    }
+
     td{
         font-size: 12px;
     }
@@ -456,10 +461,7 @@ td{
     } 
 
     .header-section{
-        background: var(--dark-color);
         height: 80vh;
-        position: relative;
-        margin-top: 0px !important;
     }
 
     .title{
