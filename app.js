@@ -113,7 +113,13 @@ const matchResult = window.matchMedia("(max-width: 768px)");
 
 function isSmallScreen(){
     if(window.matchMedia("(max-width: 768px)").matches){
+        const playedEl = document.querySelector('.played');
+        const pointsEl = document.querySelector('.points');
+
+        playedEl.textContent = 'PL'
+        pointsEl.textContent = 'PTS'
         resetLetter();
+
     }
 }
 
