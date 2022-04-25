@@ -72,5 +72,6 @@ section{
 @media(max-width: 600px){
     .score-section, .fixture-stat{
         font-size: 14px;
+        padding: 10px 0;
     }
 }
