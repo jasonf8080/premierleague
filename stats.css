@@ -69,3 +69,8 @@ section{
 }
 
 
+@media(max-width: 600px){
+    .score-section, .fixture-stat{
+        font-size: 14px;
+    }
+}
