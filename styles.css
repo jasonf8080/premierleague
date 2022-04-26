@@ -515,7 +515,9 @@ td{
 
 
 
-   
+   table{
+       padding: 5px;
+   }
 
     .header-section{
         height: 80vh;
