@@ -31,9 +31,10 @@ section{
 }
 
 .title{
-    font-size: 45px;
+    font-size: 24px;
+    text-transform: uppercase;
     color: white;
-    text-align: center;
+    font-weight: lighter;
     margin-bottom: 30px;
 }
 
@@ -97,7 +98,8 @@ section{
 }
 
 .nav-logo{
-    max-width: 60px;
+    min-width: 100px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -526,7 +528,7 @@ td{
 
     td{
         font-size: 13px;
-        padding: 5px;
+        padding: 8px;
     }
 
     .pl-logo{
