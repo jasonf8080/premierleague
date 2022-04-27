@@ -594,11 +594,11 @@ td{
     }
 
     .news-item{
-        grid-template-columns: 110px auto;
+        grid-template-columns: 120px auto;
     }
 
     .news-content{
-        padding: 14px;
+        padding: 20px;
     }
 
     .news-content span{
