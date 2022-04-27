@@ -584,13 +584,26 @@ td{
    }
 
     .header-section{
-        height: 80vh;
+        height: 75vh;
     }
 
     
 
     .title{
         font-size: 25px;
+    }
+
+    .news-item{
+        display: grid;
+        grid-template-columns: 100px auto;
+    }
+
+    .news-content span{
+        font-size: 10px;
+    }
+
+    .news-content h4{
+        font-size: 12px;
     }
 
     td{
