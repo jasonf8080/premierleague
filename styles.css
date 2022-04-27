@@ -584,7 +584,7 @@ td{
    }
 
     .header-section{
-        height: 75vh;
+        height: 70vh;
     }
 
     
@@ -594,8 +594,11 @@ td{
     }
 
     .news-item{
-        display: grid;
-        grid-template-columns: 100px auto;
+        grid-template-columns: 110px auto;
+    }
+
+    .news-content{
+        padding: 14px;
     }
 
     .news-content span{
