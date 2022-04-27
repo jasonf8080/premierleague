@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -32,7 +33,7 @@ section{
 
 .title{
     font-size: 24px;
-    text-transform: uppercase;
+    
     color: white;
     font-weight: lighter;
     margin-bottom: 30px;
@@ -41,19 +42,34 @@ section{
 
 
 .teams-list{
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     max-width: 100vw;
     min-width: 100vw;
     background-color: rgb(41, 13, 65);
-    z-index: 99;
+    z-index: 999;
+    color: white;
+    min-height: 100vh;
+    display: none;
+    background: var(--dark-color);
+}
+
+.teams-list.active{
+    display: block;
+}
+
+.teams-list i{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 40px;
     color: white;
 }
 
 .teams-list ul{
-    display: none;
-    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--dark-color);
 }
 
 .teams-list ul.active{
@@ -61,6 +77,7 @@ section{
 }
 
 .teams-list ul li{
+    border: 1px solid rgb(58, 22, 82);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +99,6 @@ section{
 
 .nav-container{
     background: white;
-    border-bottom: 1px solid black;
     position: relative;
     box-shadow: 0px -5px 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -125,9 +141,8 @@ section{
 
 .links li{
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 
@@ -136,50 +151,84 @@ section{
 }
 
 .header-section{
-    background: var(--dark-color);
+    background: url("https://www.telegraph.co.uk/content/dam/football/2019/05/12/TELEMMGLPICT000196898158_trans_NvBQzQNjv4Bqyntj27Do1A_uEF6jNSG5NliLS1kdl2-31boe1QZtYnw.jpeg") no-repeat center/cover;
     height: 90vh;
     position: relative;
     margin-top: 0px !important;
 }
 
-.header-img{
-    height: 50%;
-    background: url('https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/Emirates%20Stadium%20.jpg?itok=naCpYSZ6') no-repeat center/cover;
-}
-
-.pl-logo{
+.header-section::after{
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(255, 255, 255);
-    border: 1px solid black;
-   height: 250px;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top left, #660066 0%, #00ffff 100%);
+    opacity: 0.5;
 }
 
-.pl-logo img{
-   width: 150px;
-   height: auto;
+.news-section{
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-.header-img, .pl-header{
-    height: 50%;
-    min-height: 50%;
+.news-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
-.header-img img{
-    min-width: 100%;
+.news-item{
+    display: grid;
+    grid-template-columns: 160px auto;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    background-color: rgb(41, 13, 65);
+    color: white;
+}
+
+.news-item:hover{
+   transform: translateY(-10px);
+}
+
+
+.news-item img{
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    border-radius: 12px 0px 0px 12px;
 }
 
-.pl-header{
-    background-color: var(--dark-color);
+.news-content{
+    padding: 30px;
+    position: relative;
+}
+
+.news-content::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: rgb(255, 82, 125);
+}
+
+
+.news-content span{
+    color: rgb(255, 82, 125);
+}
+
+.news-content h4{
+    font-weight: lighter;
+}
+
+
+.news-content p{
+    font-size: rgb(201, 109, 109);
 }
 
 .latest-results{
@@ -193,8 +242,8 @@ section{
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
-    row-gap: 30px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .latest-result, .latest-result img{
@@ -203,7 +252,7 @@ section{
 
 
 .latest-result img{
-    border-bottom: 1px solid rgb(96, 78, 119);
+    border-bottom: 1px solid rgb(97, 38, 136);
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -214,19 +263,18 @@ section{
     transition: transform 0.5s ease;
     cursor: pointer;
     text-decoration: none;
-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.473);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.473);
 }
 
 .latest-result:hover{
-    transform: scale(1.05);
-    background-color: rgb(255, 122, 82);
+    transform: translateY(-10px);  
 }
 
 .team-1, .team-2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    padding: 10px 25px;
     font-size: 20px;
 }
 
@@ -287,13 +335,13 @@ thead{
 
 
 tr{
-    background-color: var(--dark-color);
     min-width: 100%;
     text-align: center;
     padding: 12px 0;
     color: white;
-    border-bottom: 1px solid rgb(22, 5, 37);
+    border-bottom: 1px solid rgb(64, 18, 73);
     transition: background-color 0.5s ease;
+    background-color: var(--dark-color);
 }
 
 tr:hover{
@@ -414,6 +462,11 @@ td{
 
 @media(max-width: 1200px){
  
+
+    body{
+        border: 3px solid rgb(127, 47, 255);
+    }
+
   .teams-list ul{
     grid-template-columns: repeat(4, 1fr);
 }
@@ -432,6 +485,13 @@ td{
         grid-template-columns: repeat(3, 1fr);
     }
   
+    body{
+        border: 3px solid greenyellow;
+    }
+
+    .news-container{
+        grid-template-columns: 1fr;
+    }
 
     td{
         font-size: 14px;
@@ -439,6 +499,10 @@ td{
 }
 
 @media(max-width: 768px){
+
+    body{
+        border: 3px solid red;
+    }
 
     .menu-icon{
         display: block;
@@ -515,7 +579,7 @@ td{
 
 
 
-   table{
+   .table{
        padding: 5px;
    }
 

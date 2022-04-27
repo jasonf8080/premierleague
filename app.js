@@ -1,7 +1,8 @@
 import { fetchData } from "./fetchData.js";
 import { fetchMenu } from "./fetchData.js";
-import { displayItems, displayFixtures } from "./displayItems.js";
+import { displayItems, displayFixtures, displayNews } from "./displayItems.js";
 import { hideLoader } from "./loader.js";
+import { newsArticles } from "./news.js";
 
 
 
@@ -13,7 +14,9 @@ const links = document.querySelectorAll('.links li');
 const clubLink = document.querySelector('#club-link');
 const tableBody = document.querySelector('tbody');
 const latestResultsGrid = document.querySelector('.latest-results-grid');
+const teamsListPage = document.querySelector('.teams-list');
 const teamsList = document.querySelector('.teams-list ul');
+
 
 
 
@@ -21,8 +24,10 @@ const teamsList = document.querySelector('.teams-list ul');
 
 
 const load = async () => {
+    displayNews(newsArticles);
     displayData(baseURL);
     adjustFixtures(fixtureURL);
+
 }
 
 menuBtn.addEventListener('click', () => {
@@ -38,11 +43,11 @@ clubLink.addEventListener('click', async() => {
     const data = await fetchMenu(baseURL);
     let clubs = data.table;
     
-    const clubsEl = clubs.map((club) => {
+    /*const clubsEl = clubs.map((club) => {
       return `<li id="${club.strTeam}" data-id="${club.idTeam}"><img src="${club.strTeamBadge}"><p>${club.strTeam}</p></li>`;
     }).join('');
 
-    teamsList.classList.toggle('active');
+    teamsListPage.classList.toggle('active');
     teamsList.innerHTML = clubsEl;
 
     const menuTeams = [...document.querySelectorAll('.teams-list ul li')];
@@ -58,7 +63,7 @@ clubLink.addEventListener('click', async() => {
         
         window.location = 'team.html';
        })
-    })
+    })*/
 })
 
 

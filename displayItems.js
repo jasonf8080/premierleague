@@ -1,5 +1,6 @@
 import { hideLoader } from "./loader.js";
 import { fetchData } from "./fetchData.js";
+import { newsArticles } from "./news.js";
 
 const tableBody = document.querySelector('tbody');
 const teamName = document.querySelector('.team-name-section');
@@ -10,6 +11,23 @@ const statsContainer = document.querySelector('.fixture-stats-container');
 
 
 //HOME PAGE
+
+export const displayNews = (newsArticles) => {
+    const articles = newsArticles.map((article) => {
+        return `<div class="news-item">
+        <img src="${article.image}" alt="">
+        <div class="news-content">
+            <span class="type">${article.subject}</span>
+            <h4>${article.heading}</h4>
+        </div>
+    </div>`
+    }).join('');
+
+    const newsContainer = document.querySelector('.news-container');
+    newsContainer.innerHTML = articles;
+}
+
+
 
 //Display Table
 export const displayItems = (data) => {
@@ -169,5 +187,25 @@ export const displayStats = (data) => {
     
 
    statsContainer.innerHTML = stats;
+    hideLoader();
+}
+
+
+export const displayTeamPage = (stadiums) => {
+   const teamEl = stadiums.map((team) => {
+        const {strTeam: teamName, strTeamBadge:badge, strStadium:stadiumName, strStadiumThumb:stadiumImage} = team;
+        return `<a href="team.html" class="club-item" id="${teamName}" data-id="${team.idTeam}">
+        <img class="stadium-img" src="${stadiumImage}" alt="">
+            <img class="badge-img" src="${badge}" alt="">
+        <div class="club-item-content">
+            <h4>${teamName}</h4>
+            <p class="stadium-location">${stadiumName}</p>
+        </div>
+    </a>`
+   }).join('');
+
+   const clubsGrid = document.querySelector('.clubs-grid');
+   clubsGrid.innerHTML = teamEl;
+
     hideLoader();
 }

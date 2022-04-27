@@ -45,7 +45,7 @@ body{
 .player-number{
     font-size: 40px;
     color: white;
-    background: rgb(255, 122, 82);
+    background: var(--dark-color);
     padding: 15px 25px;
     margin-right: 30px;
 }
@@ -74,7 +74,10 @@ body{
 
  tr{
     border-bottom: 1px solid rgb(145, 40, 40);
+}
 
+tr:hover{
+    background: var(--dark-color) !important;
 }
 
 .stats-table td{
