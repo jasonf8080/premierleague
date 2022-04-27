@@ -11,6 +11,10 @@
     --dark-color: rgb(39, 15, 54);
 }
 
+img{
+    display: block;
+}
+
 li{
     list-style: none;
 }

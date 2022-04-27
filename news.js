@@ -14,7 +14,7 @@ export const newsArticles = [
     },
 
     {
-        heading: 'Antonio Rudiger: Chelsea defender close to agreeing four-year contract at Real Madrid as Jorginho says club will miss him' ,
+        heading: 'Antonio Rudiger: Chelsea defender close to agreeing four-year contract at Real Madrid' ,
         image: 'https://i2-prod.football.london/incoming/article23765504.ece/ALTERNATES/s1200c/0_CFC-Article-Template-2022-04-23T132737265.png',
         subject: 'Stats'
     },
@@ -53,7 +53,7 @@ export const allNewsArticles = [
     },
 
     {
-        heading: 'Antonio Rudiger: Chelsea defender close to agreeing four-year contract at Real Madrid as Jorginho says club will miss him' ,
+        heading: 'Antonio Rudiger: Chelsea defender close to agreeing four-year contract at Real Madrid' ,
         image: 'https://i2-prod.football.london/incoming/article23765504.ece/ALTERNATES/s1200c/0_CFC-Article-Template-2022-04-23T132737265.png',
         subject: 'Stats'
     },
