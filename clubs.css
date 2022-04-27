@@ -75,4 +75,8 @@ body{
     .club-item-content p, .club-item-content h4{
         font-size: 12px;
     }
+
+    .club-item-content{
+        padding: 50px 0 30px;
+    }
 }
