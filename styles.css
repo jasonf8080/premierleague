@@ -540,7 +540,7 @@ td{
         margin-bottom: 50px !important;
     }
 
-    .teams-list ul, .latest-results-grid, .recent-results-container{
+    .teams-list ul, .latest-results-grid, .recent-results-container, .clubs-grid{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 15px;
         row-gap: 15px;
