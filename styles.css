@@ -654,6 +654,6 @@ td{
 @media(max-width: 500px){
     .header-text h1{
         font-size: 26px;
-        padding: 3px 17px;
+        padding: 3px 10px;
     }
 }
