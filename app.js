@@ -1,7 +1,5 @@
 import { fetchData } from "./fetchData.js";
-import { fetchMenu } from "./fetchData.js";
 import { displayItems, displayFixtures, displayNews } from "./displayItems.js";
-import { hideLoader } from "./loader.js";
 import { newsArticles } from "./news.js";
 
 
@@ -27,44 +25,16 @@ const load = async () => {
     displayNews(newsArticles);
     displayData(baseURL);
     adjustFixtures(fixtureURL);
-
 }
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
-    teamsList.classList.remove('active');
 })
 
 links.forEach((link) => {
     link.addEventListener('click', () => menu.classList.remove('active'))
 })
 
-clubLink.addEventListener('click', async() => {
-    const data = await fetchMenu(baseURL);
-    let clubs = data.table;
-    
-    /*const clubsEl = clubs.map((club) => {
-      return `<li id="${club.strTeam}" data-id="${club.idTeam}"><img src="${club.strTeamBadge}"><p>${club.strTeam}</p></li>`;
-    }).join('');
-
-    teamsListPage.classList.toggle('active');
-    teamsList.innerHTML = clubsEl;
-
-    const menuTeams = [...document.querySelectorAll('.teams-list ul li')];
-    menuTeams.forEach((team) => {
-       team.addEventListener('click', () => {
-        const selectedID = team.getAttribute('data-id');
-        const teamID = team.getAttribute('id');// team name
-        
-        console.log(selectedID, teamID)
-    
-        localStorage.setItem('selectedID', selectedID)
-        localStorage.setItem('teamID', teamID);
-        
-        window.location = 'team.html';
-       })
-    })*/
-})
 
 
 latestResultsGrid.addEventListener('click', (e) => {
@@ -97,7 +67,6 @@ tableBody.addEventListener('click', (e) => {
     localStorage.setItem('teamID', teamID);
     
     window.location = 'team.html';
-   
 })
 
 
@@ -114,6 +83,9 @@ const adjustFixtures = async (url) => {
     displayFixtures(fixtures, latestResultsGrid);
 }
 
+
+
+//Reset Table
 const matchResult = window.matchMedia("(max-width: 768px)");
 
 function isSmallScreen(){
