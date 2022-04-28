@@ -583,7 +583,7 @@ td{
 @media(max-width: 600px){
 
     .header-text h1{
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .header-text p{
@@ -648,5 +648,11 @@ td{
 
     .gf, .ga{
         display: none;
+    }
+}
+
+@media(max-width: 500px){
+    .header-text h1{
+        font-size: 26px;
     }
 }
