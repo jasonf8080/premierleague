@@ -137,7 +137,7 @@ section{
 .header-text{
     z-index: 99;
     color: white;
-    text-shadow: 2px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 15px rgb(0, 0, 0);
     position: absolute;
     top: 40%;
     left: 50%;
@@ -148,10 +148,8 @@ section{
 .header-text h1{
     font-size: 80px;
     font-weight: bold;
-    background: rgb(58, 22, 82);
-    padding: 5px 22px;
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .header-text p{

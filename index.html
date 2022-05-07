@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader-container active">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+
+
+    <div class="nav-container">
+        <nav class="nav">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png" alt="" class="nav-logo">
+
+            <ul class="links">
+                <li id="club-link"><a href="clubs.html">Clubs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="#table-section">Standings</a></li>
+                <li><a href="#latest-results">Results</a></li>
+            </ul>
+
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+       
+       
+
+    </div>
+
+    <section class="header-section">
+        <div class="header-text">
+            <h1 class="main-header">Premier League</h1>
+            <p class="sub-header">2021/2022</p>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h1 class="title">News</h1>
+        <div class="news-container"></div>
+
+        <a href="news.html" class="view-news-btn">View More</a>
+    </section>
+
+    <section id="latest-results" class="latest-results">
+        <h1 class="title">Latest Results</h1>
+
+        <div class="latest-results-grid"></div>
+    </section>
+
+
+    <section id="table-section" class="table-section">
+        <h1 class="title">Live Table</h1>
+    
+            <table class="table">
+                <thead>
+                    <td class="position">Position</td>
+                    <td class="align-left">Club</td>
+                    <td class="played">Played</td>
+                    <td class="wld">Won</td>
+                    <td class="wld">Drawn</td>
+                    <td class="wld">Lost</td>
+                    <td class="gf">GF</td>
+                    <td class="ga">GA</td>
+                    <td>GD</td>
+                    <td class="points">Points</td>
+                </thead>
+
+                
+                <tbody></tbody>
+            </table>
+    
+    </section>
+
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy;Premier League</p>
+            <img src="https://seeklogo.com/images/P/premier-league-logo-7B3F0F173A-seeklogo.com.png" alt="">
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+</body>
+</html>
