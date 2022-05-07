@@ -19,6 +19,13 @@ const rosterGrid = document.querySelector('.roster-grid');
 
 //EVENT LISTENERS
 const load = async() => {
+    const tl = gsap.timeline({
+        defaults: {duration: 0.75}
+    });
+    
+
+
+
     const headerData = await fetchData(teamURL);
     const fixtureData = await fetchData(fixtureURL)
     const playerData = await fetchData(url);
@@ -33,6 +40,8 @@ const load = async() => {
     displayPlayers(players, rosterGrid)
 
     hideLoader();
+    tl.fromTo('.club-logo2', {opacity: 0, x:"-50px"}, {opacity: 1, x:"0px"})
+    tl.fromTo('.club-name', {opacity: 0, x:"120px"}, {opacity:1, x:"0px"})
     
 }
 
